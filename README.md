@@ -2,8 +2,6 @@
 
 This frontend consumes the backend API and displays the quota, rate-limit state, and generated AI response.
 
-URL
-https://proxy-backend1-ten.vercel.app/ 
 
 ## Features
 
@@ -22,15 +20,7 @@ npm run dev
 ```
 
 ## Vercel deployment
-
-1. Push this repository to GitHub.
-2. Go to Vercel and import the project.
-3. Select the repository and keep the default Vite configuration.
-4. Set the environment variable:
-
-```bash
-VITE_API_URL=https://your-backend-url.com
-```
+https://proxy-backend1-ten.vercel.app/ 
 
 5. Deploy.
 
