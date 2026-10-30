@@ -1,22 +1,41 @@
-# Proxy Frontend
+# AI Proxy Platform Frontend
 
-This frontend demonstrates how a client interacts with a protected backend using a proxy-based architecture.
+This frontend consumes the backend API and displays the quota, rate-limit state, and generated AI response.
 
 ## Features
 
-- loads resources from the backend,
-- shows different access states by user role,
-- explains the concept visually and in code.
+- user selection and plan selection,
+- fake prompt input,
+- request to the AI proxy,
+- quota status panel,
+- usage history for the last seven days,
+- error handling for rate-limit and quota responses.
 
-## Run locally
+## Local execution
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open the Vite app in the browser.
+## Vercel deployment
 
-## Production deployment
+1. Push this repository to GitHub.
+2. Go to Vercel and import the project.
+3. Select the repository and keep the default Vite configuration.
+4. Set the environment variable:
 
-For Vercel, deploy this project as a standard Vite app. Set the environment variable `VITE_API_URL` to your deployed backend endpoint.
+```bash
+VITE_API_URL=https://your-backend-url.com
+```
+
+5. Deploy.
+
+## Production behavior
+
+The frontend expects the backend to be available at the configured API URL. The app calls:
+
+- `POST /api/generate`
+- `GET /api/quota/status`
+- `GET /api/quota/history`
+- `POST /api/quota/update`
