@@ -2,6 +2,9 @@
 
 This frontend consumes the backend API and displays the quota, rate-limit state, and generated AI response.
 
+URL
+https://proxy-backend1-ten.vercel.app/ 
+
 ## Features
 
 - user selection and plan selection,
